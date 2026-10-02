@@ -12,7 +12,7 @@ export default function HomeScreen() {
   const [leads, setLeads] = useState<Lead[]>([]);
   // const [message, setMessage] = useState<string>('');
   useEffect(() => {
-    const ws = new WebSocket('ws://192.168.29.178:3000');
+    const ws = new WebSocket('ws://localhost:3000');
     ws.onopen = () => {
       console.log('Connected to WebSocket server');
     };
@@ -64,6 +64,6 @@ const styles = StyleSheet.create({
   text: {
     fontSize: 16,
     fontWeight: 'bold',
-    color: '#e9dbdb',
+    color: '#e5e8ed',
   },
 });
