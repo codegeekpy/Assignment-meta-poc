@@ -23,8 +23,7 @@ A real-time proof-of-concept system for capturing **Meta (Facebook & Instagram) 
 - [API & WebSocket Reference](#-api--websocket-reference)
 - [Environment Variables](#-environment-variables)
 - [Troubleshooting & FAQs](#-troubleshooting--faqs)
-- [Roadmap & Production Enhancements](#-roadmap--production-enhancements)
-- [License](#-license)
+
 
 ---
 
@@ -352,17 +351,3 @@ The server requires the following configuration in `src/server/.env`:
 - **Fix**: In `src/server/server.js`, inspect the logged `leadDetails.field_data` and adjust the matching logic in the `lead` object mapping if your form uses custom questions.
 
 ---
-
-## 🔮 Roadmap & Production Enhancements
-
-- [ ] **Database Persistence**: Store leads in PostgreSQL / MongoDB via Prisma or Supabase rather than in-memory storage.
-- [ ] **Security & HMAC Validation**: Validate the `X-Hub-Signature-256` header on incoming webhooks using your Meta App Secret to prevent spoofing.
-- [ ] **Push Notifications**: Integrate [Expo Notifications](https://docs.expo.dev/versions/latest/sdk/notifications/) to alert sales teams when the app is in the background.
-- [ ] **CRM & Webhook Forwarding**: Sync leads automatically with CRMs (Salesforce, HubSpot, Zoho) or forward to Slack/Discord channels.
-- [ ] **Authentication & Access Control**: Implement user accounts and role-based access control (RBAC).
-
----
-
-## 📄 License
-
-This project is licensed under the terms of the [MIT License](LICENSE).
